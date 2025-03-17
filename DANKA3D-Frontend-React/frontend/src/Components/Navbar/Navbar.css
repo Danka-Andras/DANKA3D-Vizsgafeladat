@@ -1,0 +1,218 @@
+body {
+  color: black;
+  margin: 0;
+}
+
+.navbar {
+  background-color: turquoise;
+  border: 3px solid black;
+  border-radius: 0 0 15px 15px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 0 20px;
+  height: 60px;
+  transition: height 0.3s ease-in-out, border-radius 0.3s ease-in-out, margin-bottom 0.3s ease-in-out;
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.navbar-logo {
+  font-size: 2em;
+  margin-right: 15px;
+  margin-left: 100px;
+}
+
+.navbar-logo a {
+  text-decoration: none;
+  color: black;
+}
+
+.navbar-logo a:hover {
+  text-decoration: none;
+}
+
+.navbar-ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  justify-content: flex-start;
+  margin-right: 100px;
+}
+
+.navbar-ul li:not(.navbar-logo) a {
+  font-size: 25px;
+  margin-left: 20px;
+}
+
+.navbar-ul .profile-button {
+  margin-left: auto;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.hamburger-menu {
+  display: none;
+  background: none;
+  border: none;
+  color: black;
+  cursor: pointer;
+  font-size: 2em;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-ul li a {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-ul li a svg {
+  margin-right: 8px;
+  font-size: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 12px 20px;
+    height: 60px;
+    margin-bottom: 0;
+    border-bottom: 3px solid black;
+    border-radius: 0 0 15px 15px;
+  }
+
+  .navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    gap: 40px;
+  }
+
+  .searchbar {
+    max-width: 100%;
+    width: calc(100% - 40px);
+    margin: 10px 0;
+  }
+
+  .hamburger-menu {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2em;
+    padding: 0;
+    margin: 0;
+  }
+
+  .navbar-ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100vw + 0px);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    position: absolute;
+    top: 60px;
+    right: -2.5px;
+    left: -2.5px;
+    background-color: turquoise;
+    padding: 10px 0;
+    visibility: hidden;
+    border-top: none;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-radius: 0;
+  }
+
+  .navbar.expanded .navbar-ul {
+    opacity: 1;
+    visibility: visible;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  .navbar.expanded {
+    height: auto;
+    border-radius: 0;
+    border-bottom: none;
+  }
+
+  .navbar-ul li {
+    text-align: center;
+    width: 100%;
+    padding: 15px;
+  }
+
+  .navbar-ul li a {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-size: 1.5em;
+    color: black;
+  }
+
+  .search-input {
+    padding: 5px 10px;
+    border: 3px solid black;
+    border-radius: 20px;
+    font-size: 14px;
+    background-color: transparent;
+    outline: none;
+    color: black;
+    width: 250px;
+    text-align: center;
+    height: 35px;
+  }
+}
+
+.search-input::placeholder {
+  color: black;
+  opacity: 1;
+}
+
+.search-input {
+  padding: 5px 10px;
+  border: 3px solid black;
+  border-radius: 20px;
+  font-size: 20px;
+  font-family: "Figtree", sans-serif;
+  background-color: transparent;
+  outline: none;
+  color: black;
+  width: 350px;
+  text-align: start;
+  height: 35px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  font-size: 25px;
+  margin-right: 8px;
+  margin-left: 20px;
+}

@@ -1,0 +1,13 @@
+.h1-icon {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1em;
+    margin-left: 10px;
+  }
+  
+  h1 {
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+  }
+  

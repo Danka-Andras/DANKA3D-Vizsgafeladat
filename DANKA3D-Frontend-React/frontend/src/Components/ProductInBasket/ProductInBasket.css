@@ -1,0 +1,60 @@
+.product-in-basket {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 330px;
+    padding: 5px;
+    border: 3px solid black;
+    border-radius: 10px;
+    background: transparent;
+}
+
+.product-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.product-details {
+    display: flex;
+    flex-direction: column;
+    gap: 3px; /* Csökkentett távolság az adatok között */
+}
+
+.product-name {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.product-meta {
+    display: flex;
+    flex-direction: column; /* Elemek egymás alatt */
+    font-size: 14px;
+    gap: 2px;
+}
+
+.product-image img {
+    width: 75px;
+    height: 50px;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+.remove-button {
+    background: transparent;
+    color: black;
+    border: 3px solid black;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 30px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.remove-button:hover {
+    background: orange;
+}
