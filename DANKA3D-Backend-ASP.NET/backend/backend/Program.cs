@@ -3,30 +3,30 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Adatbázis kapcsolat beállítása
+// Database connection setup
 builder.Services.AddDbContext<DatabaseContext>(options =>
-    options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"),
-        ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("DefaultConnection"))));
+    options.UseMySql(
+        builder.Configuration.GetConnectionString("DefaultConnection"),
+        ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("DefaultConnection"))
+    ));
 
-// CORS beállítása
+// Configure CORS
 const string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
-
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy(name: MyAllowSpecificOrigins,
-        policy =>
-        {
-            policy.WithOrigins("http://localhost:3000", "http://192.168.1.137:3000") // A frontend URL-jét engedélyezi
-                  .AllowAnyMethod() // Bármely HTTP metódus engedélyezése
-                  .AllowAnyHeader() // Bármilyen header engedélyezése
-                  .AllowCredentials(); // Hitelesítési adatok engedélyezése (pl. sütik)
-        });
+    options.AddPolicy(name: MyAllowSpecificOrigins, policy =>
+    {
+        policy.WithOrigins("http://localhost:3000", "http://10.0.13.4:3000")
+              .AllowAnyMethod()
+              .AllowAnyHeader()
+              .AllowCredentials();
+    });
 });
 
-// MVC és Controller-ek hozzáadása
+// Add Controllers and other services
 builder.Services.AddControllers();
 
-// Swagger beállítása a fejlesztési környezethez
+// Add Swagger for API documentation in development mode
 if (builder.Environment.IsDevelopment())
 {
     builder.Services.AddEndpointsApiExplorer();
@@ -35,18 +35,16 @@ if (builder.Environment.IsDevelopment())
 
 var app = builder.Build();
 
-// Swagger használata fejlesztési környezetben
+// Use Swagger in development mode
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
-
-// CORS engedélyezése
+// Middleware setup
+//app.UseHttpsRedirection();
 app.UseCors(MyAllowSpecificOrigins);
-
 app.UseAuthorization();
 app.MapControllers();
 
