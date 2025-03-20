@@ -25,13 +25,14 @@ namespace backend.Models
         public int Stock { get; set; }
 
         [MaxLength(50)]
-        [Column(TypeName = "varchar(50)")]
+        [Column("color")]
         public string? Color { get; set; }
 
         [MaxLength(255)]
-        [Column(TypeName = "varchar(255)")]
+        [Column("image_url")]
         public string? ImageUrl { get; set; }
 
-        public DateTime CreatedAt { get; set; }
+        [Column("created_at")]
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     }
 }

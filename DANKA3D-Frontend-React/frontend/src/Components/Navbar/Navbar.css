@@ -216,3 +216,35 @@ a:hover {
   margin-right: 8px;
   margin-left: 20px;
 }
+
+.logout-button {
+  font-size: 25px;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  text-decoration: none;
+}
+
+.logout-button:hover {
+  text-decoration: underline;
+}
+
+.logout-button svg {
+  margin-right: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .logout-button {
+    font-size: 1.5em;
+    padding: 15px;
+    width: 100%;
+    justify-content: start;
+    margin-left: 40px;
+  }
+
+  .logout-button svg {
+    margin-right: 10px;
+  }
+}

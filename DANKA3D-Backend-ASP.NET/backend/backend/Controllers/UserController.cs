@@ -4,6 +4,7 @@ using backend.DataContext;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
+using Microsoft.AspNetCore.Http;
 
 namespace backend.Controllers
 {
@@ -18,7 +19,6 @@ namespace backend.Controllers
             _context = context;
         }
 
-        // Regisztráció végpont
         [HttpPost("register")]
         public IActionResult Register([FromBody] RegisterRequest request)
         {
@@ -28,7 +28,7 @@ namespace backend.Controllers
                 return BadRequest("User already exists.");
             }
 
-            var hashedPassword = HashPassword(request.Password); // SHA-256 hash
+            var hashedPassword = HashPassword(request.Password);
 
             var user = new UserModel
             {
@@ -43,15 +43,16 @@ namespace backend.Controllers
             return Ok(new { message = "User registered successfully!" });
         }
 
-        // Bejelentkezés végpont
         [HttpPost("login")]
         public IActionResult Login([FromBody] LoginRequest request)
         {
             var user = _context.Users.FirstOrDefault(u => u.Email == request.Email);
-            if (user == null || !VerifyPassword(request.Password, user.PasswordHash)) // Verify password
+            if (user == null || !VerifyPassword(request.Password, user.PasswordHash))
             {
                 return Unauthorized("Invalid credentials.");
             }
+
+            HttpContext.Session.SetString("UserEmail", user.Email);
 
             return Ok(new { message = "Login successful!" });
         }
@@ -59,10 +60,21 @@ namespace backend.Controllers
         [HttpPost("logout")]
         public IActionResult Logout()
         {
+            HttpContext.Session.Remove("UserEmail");
             return Ok(new { message = "Logout successful!" });
         }
 
-        // Jelszó hashelése SHA-256 algoritmussal
+        [HttpGet("me")]
+        public IActionResult GetCurrentUser()
+        {
+            var userEmail = HttpContext.Session.GetString("UserEmail");
+            if (string.IsNullOrEmpty(userEmail))
+            {
+                return Unauthorized("No active session.");
+            }
+            return Ok(new { email = userEmail });
+        }
+
         private string HashPassword(string password)
         {
             using (var sha256 = SHA256.Create())
@@ -72,21 +84,18 @@ namespace backend.Controllers
             }
         }
 
-        // Jelszó ellenőrzése
         private bool VerifyPassword(string enteredPassword, string storedHash)
         {
             var enteredHash = HashPassword(enteredPassword);
             return enteredHash == storedHash;
         }
 
-        // Regisztrációs kérés modell
         public class RegisterRequest
         {
             public string? Email { get; set; }
             public string? Password { get; set; }
         }
 
-        // Bejelentkezési kérés modell
         public class LoginRequest
         {
             public string? Email { get; set; }
