@@ -6,6 +6,7 @@ import NotFound from './Components/NotFound/NotFound';
 import ForgotPassword from './Components/LoginRegister/ForgotPassword';
 import Basket from './Components/Basket/Basket';
 import ProductDetails from "./Components/ProductDetails/ProductDetails";
+import ProtectedRoute from "./Components/Auth/ProtectedAuth";
 
 function App() {
   return (
@@ -14,8 +15,15 @@ function App() {
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="/forgotpassword" element={<ForgotPassword />} />
-      <Route path="/basket" element={<Basket />} />
-      <Route path="/product-details/:productId" element={<ProductDetails />} /> {/* Új útvonal a termék részletekhez */}
+      <Route 
+        path="/basket" 
+        element={
+          <ProtectedRoute>
+            <Basket />
+          </ProtectedRoute>
+        } 
+      />
+      <Route path="/product-details/:productId" element={<ProductDetails />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

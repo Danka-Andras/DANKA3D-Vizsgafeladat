@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import "./LoginRegister.css";
 
 // Icons
@@ -125,6 +125,9 @@ const Login = () => {
             <p>
               Nincs még fiókod? <a href="/register">Regisztrálj!</a>
             </p>
+          </div>
+          <div className="home-link">
+            <p><Link to="/">⬅ Vissza a főoldalra</Link></p>
           </div>
         </form>
       </div>

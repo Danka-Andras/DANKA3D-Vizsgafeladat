@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './LoginRegister.css';
+import { useNavigate, Link } from "react-router-dom";
 
 // Icon-ok
 import { LuMail, LuLock, LuSquareCheck, LuSquare } from "react-icons/lu";
@@ -11,6 +12,7 @@ const LoginRegister = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const navigate = useNavigate();
 
   const handleRegister = async (e) => {
     e.preventDefault();
@@ -23,8 +25,7 @@ const LoginRegister = () => {
     try {
       const response = await axios.post("http://localhost:5277/api/User/register", { email, password });
       console.log(response.data);
-      // Itt átirányíthatod a felhasználót, pl. a bejelentkezési oldalra
-      // navigate("/login");
+      navigate("/login");
     } catch (err) {
       setError(err.response?.data || 'Hiba történt a regisztráció során');
       console.error('Regisztrációs hiba:', err);
@@ -68,7 +69,10 @@ const LoginRegister = () => {
           </div>
           <button type='submit'>Regisztráció</button>
           <div className="register-link">
-            <p>Van már fiókod? <a href="/login">Jelentkezz be!</a></p>
+            <p>Van már fiókod? <Link to="/login">Jelentkezz be!</Link></p>
+          </div>
+          <div className="home-link">
+            <p><Link to="/">⬅ Vissza a főoldalra</Link></p>
           </div>
         </form>
       </div>

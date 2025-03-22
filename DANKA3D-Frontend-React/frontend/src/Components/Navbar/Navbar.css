@@ -90,7 +90,7 @@ a:hover {
   font-size: 30px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   .navbar {
     padding: 12px 20px;
     height: 60px;
