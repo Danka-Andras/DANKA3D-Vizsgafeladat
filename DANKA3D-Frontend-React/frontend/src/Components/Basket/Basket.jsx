@@ -2,16 +2,30 @@ import React, { useState, useEffect } from 'react';
 import './Basket.css';
 
 const Basket = () => {
-  const [cart, setCart] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-  const userId = 2; // A felhasználó ID-ja (valós esetben dinamikus lenne)
+  const [cart, setCart] = useState([]); // Kosár állapot
+  const [loading, setLoading] = useState(true); // Betöltési állapot
+  const [error, setError] = useState(null); // Hiba állapot
+  const [userId, setUserId] = useState(null); // Bejelentkezett felhasználó ID-ja
 
   // Kosár lekérése az API-ból
   const fetchCart = async () => {
-    if (!userId) return;
+    // Először le kell kérdezni a bejelentkezett felhasználó ID-ját
+    const userResponse = await fetch('http://localhost:5277/api/user/me', {
+      credentials: 'include', // Biztosítja, hogy a session cookie elérhető legyen
+    });
+
+    if (!userResponse.ok) {
+      setError('Nem vagy bejelentkezve.');
+      console.log('User not logged in or session expired');
+      return;
+    }
+
+    const userData = await userResponse.json();
+    setUserId(userData.userId); // Mentjük a felhasználó ID-ját
+    console.log('Logged in user:', userData);
+
     try {
-      const response = await fetch(`http://localhost:5277/api/cart/${userId}`, {
+      const response = await fetch(`http://localhost:5277/api/cart/${userData.userId}`, {
         credentials: 'include', // Biztosítja, hogy a session cookie elérhető legyen
       });
 
@@ -27,21 +41,28 @@ const Basket = () => {
         setCart(cartData.CartItems.$values);
       } else {
         setError('A válasz nem tartalmaz érvényes kosarat.');
+        console.log('Invalid cart data:', cartData);
       }
     } catch (error) {
       setError(error.message);
+      console.log('Error fetching cart:', error);
     } finally {
       setLoading(false);
+      console.log('Cart data loading complete');
     }
   };
 
+  // Kosár betöltése, ha a felhasználó be van jelentkezve
   useEffect(() => {
-    fetchCart(); // Lekéri a kosarat, amikor a komponens betöltődik
-  }, [userId]); // Csak akkor újra hívódik, ha a userId változik
+    console.log('Fetching cart data...');
+    fetchCart(); // Betöltjük a kosarat
+  }, []); // A [] biztosítja, hogy csak egyszer fusson le
 
   // Kosár tételek mennyiségének frissítése
   const updateQuantity = (itemId, newQuantity) => {
     if (newQuantity < 1) return; // Ne engedjünk 0 alatti mennyiséget
+
+    console.log(`Updating quantity for itemId: ${itemId} to ${newQuantity}`);
 
     // Frissítjük a kosarat az új mennyiséggel
     setCart(prevCart =>
@@ -61,12 +82,18 @@ const Basket = () => {
         if (!response.ok) {
           throw new Error('Hiba történt a mennyiség frissítésekor');
         }
+        console.log(`Item ${itemId} quantity updated to ${newQuantity}`);
       })
-      .catch((error) => setError(error.message));
+      .catch((error) => {
+        setError(error.message);
+        console.log('Error updating quantity:', error);
+      });
   };
 
   // Tárgy eltávolítása a kosárból
   const removeItem = (itemId) => {
+    console.log(`Removing item with ID: ${itemId}`);
+
     // Frissítjük a kosarat úgy, hogy eltávolítjuk a kiválasztott elemet
     setCart((prevCart) => prevCart.filter((item) => item.Id !== itemId));
 
@@ -78,29 +105,48 @@ const Basket = () => {
         if (!response.ok) {
           throw new Error('Hiba történt a tárgy eltávolításakor');
         }
+        console.log(`Item ${itemId} removed from cart`);
       })
-      .catch((error) => setError(error.message));
+      .catch((error) => {
+        setError(error.message);
+        console.log('Error removing item:', error);
+      });
   };
 
   // Összeg kiszámítása
   const calculateTotal = () => {
-    return cart.reduce((total, item) => total + item.Product.Price * item.Quantity, 0).toFixed(2);
+    const total = cart.reduce((total, item) => total + item.Product.Price * item.Quantity, 0);
+    console.log(`Total cost calculated: ${total}`);
+    return total.toFixed(2);
   };
 
   // Rendelés gomb
   const handleOrder = () => {
+    console.log('Order placed');
     alert('A rendelés sikeresen megtörtént!');
   };
 
+  // Betöltés állapot
   if (loading) {
+    console.log('Loading cart...');
     return <p>Loading...</p>;
   }
 
+  // Hiba esetén
   if (error) {
+    console.log('Error occurred:', error);
     return <p>{error}</p>;
   }
 
+  // Ha nincs bejelentkezve a felhasználó
+  if (!userId) {
+    console.log('User not logged in');
+    return <p>Nem vagy bejelentkezve.</p>;
+  }
+
+  // Ha a kosár üres
   if (cart.length === 0) {
+    console.log('Cart is empty');
     return <p>A kosár üres.</p>;
   }
 

@@ -75,8 +75,7 @@
               "RelativeToolTip": "backend\\Models\\CartItemModel.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAAwBgAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T15:07:06.008Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-22T15:07:06.008Z"
             },
             {
               "$type": "Document",
@@ -88,8 +87,7 @@
               "RelativeToolTip": "backend\\Models\\CartModel.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T15:06:25.613Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-22T15:06:25.613Z"
             },
             {
               "$type": "Document",
@@ -101,8 +99,7 @@
               "RelativeToolTip": "backend\\Controllers\\ProductController.cs",
               "ViewState": "AgIAAFYAAAAAAAAAAAAowGsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T17:57:59.262Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-19T17:57:59.262Z"
             },
             {
               "$type": "Document",
@@ -114,8 +111,7 @@
               "RelativeToolTip": "backend\\Controllers\\UserController.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAiwHgAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T15:08:16.317Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-15T15:08:16.317Z"
             },
             {
               "$type": "Document",
@@ -127,8 +123,7 @@
               "RelativeToolTip": "backend\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T14:41:58.175Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-15T14:41:58.175Z"
             },
             {
               "$type": "Document",
@@ -140,8 +135,7 @@
               "RelativeToolTip": "backend\\DataContext\\DatabaseContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T14:59:27.883Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-15T14:59:27.883Z"
             },
             {
               "$type": "Document",
