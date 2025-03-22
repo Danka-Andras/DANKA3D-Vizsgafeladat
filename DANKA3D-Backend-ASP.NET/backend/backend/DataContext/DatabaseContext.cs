@@ -10,6 +10,8 @@ namespace backend.DataContext
 
         public DbSet<UserModel> Users { get; set; }
         public DbSet<ProductModel> Products { get; set; }
+        public DbSet<CartModel> Carts { get; set; }
+        public DbSet<CartItemModel> CartItems { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

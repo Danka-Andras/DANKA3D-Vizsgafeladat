@@ -1,11 +1,11 @@
 import { Routes, Route } from "react-router-dom";
 import Login from './Components/LoginRegister/Login';
 import Register from './Components/LoginRegister/Register';
-import Home from './Components/Home/Home'
-import NotFound from './Components/NotFound/NotFound'
-import ForgotPassword from './Components/LoginRegister/ForgotPassword'
-import Basket from './Components/Basket/Basket'
-import ProductInBasket from "./Components/ProductInBasket/ProductInBasket";
+import Home from './Components/Home/Home';
+import NotFound from './Components/NotFound/NotFound';
+import ForgotPassword from './Components/LoginRegister/ForgotPassword';
+import Basket from './Components/Basket/Basket';
+import ProductDetails from "./Components/ProductDetails/ProductDetails";
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
       <Route path="/register" element={<Register />} />
       <Route path="/forgotpassword" element={<ForgotPassword />} />
       <Route path="/basket" element={<Basket />} />
-      <Route path="/productinbasket" element={<ProductInBasket />} />
+      <Route path="/product-details/:productId" element={<ProductDetails />} /> {/* Új útvonal a termék részletekhez */}
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

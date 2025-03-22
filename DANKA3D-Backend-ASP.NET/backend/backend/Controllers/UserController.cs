@@ -40,8 +40,20 @@ namespace backend.Controllers
             _context.Users.Add(user);
             _context.SaveChanges();
 
-            return Ok(new { message = "User registered successfully!" });
+            // Kosár létrehozása ugyanazzal az id-vel, mint a felhasználó
+            var cart = new CartModel
+            {
+                Id = user.Id, // Azonos ID a felhasználóval
+                UserId = user.Id,
+                CreatedAt = DateTime.UtcNow
+            };
+
+            _context.Carts.Add(cart);
+            _context.SaveChanges();
+
+            return Ok(new { message = "User registered successfully and cart created!" });
         }
+
 
         [HttpPost("login")]
         public IActionResult Login([FromBody] LoginRequest request)
@@ -72,8 +84,16 @@ namespace backend.Controllers
             {
                 return Unauthorized("No active session.");
             }
-            return Ok(new { email = userEmail });
+
+            var user = _context.Users.FirstOrDefault(u => u.Email == userEmail);
+            if (user == null)
+            {
+                return Unauthorized("User not found.");
+            }
+
+            return Ok(new { userId = user.Id, email = user.Email });
         }
+
 
         private string HashPassword(string password)
         {
