@@ -96,9 +96,6 @@ const Basket = () => {
 
         {!loading && !error && userId && cart.length > 0 && (
           <>
-            <div className="cart-summary">
-              <h2>Végösszeg: {calculateTotal()} Ft</h2>
-            </div>
             <ul className="cart-list">
               {cart.map((item) => (
                 <li key={item.Id} className="cart-item">
@@ -120,6 +117,9 @@ const Basket = () => {
                 </li>
               ))}
             </ul>
+            <div className="cart-summary">
+              <h2>Végösszeg: {calculateTotal()} Ft</h2>
+            </div>
             <div className="order-button">
               <button onClick={handleOrder}>Rendelés</button>
             </div>

@@ -8,15 +8,16 @@
 
 
 .product-card {
-    width: 200px;
+    width: 205px;
     height: 350px;
-    border-radius: 10px;
+    border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     background-color: turquoise;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
     margin-bottom: 20px;
     position: relative;
+    border: 3px solid black;
 }
 
 .product-card:hover {
@@ -26,9 +27,20 @@
 
 .product-image {
     width: 200px;
-    height: 350px;
-    object-fit: cover;
-    border-bottom: 1px solid #ddd;
+    height: 200px;
+    border: 3px black solid;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-image img {
+    width: 200px;
+    height: 198px;
+    border-radius: 10px;
 }
 
 .product-name {
