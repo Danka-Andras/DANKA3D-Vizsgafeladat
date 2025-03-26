@@ -1,20 +1,18 @@
 import React, { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import axios from "axios";
 import "./Navbar.css";
-
-// Iconok
-import { LuShoppingBasket, LuUserRound, LuUsersRound, LuSearch, LuBell, LuLogOut } from "react-icons/lu";
+import { LuShoppingBasket, LuUserRound, LuUsersRound, LuSearch, LuTruck, LuLogOut } from "react-icons/lu";
 
 const API_BASE_URL = "http://localhost:5277/api";
 
-const Navbar = () => {
+const Navbar = ({ onSearch }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
 
-  // Ellenőrzi, hogy be van-e jelentkezve a felhasználó
   useEffect(() => {
     const checkLoginStatus = async () => {
       try {
@@ -29,7 +27,6 @@ const Navbar = () => {
     checkLoginStatus();
   }, []);
 
-  // Kijelentkezés kezelése
   const handleLogout = async () => {
     try {
       await axios.post(`${API_BASE_URL}/User/logout`, {}, { withCredentials: true });
@@ -38,6 +35,11 @@ const Navbar = () => {
     } catch (error) {
       console.error("Logout error:", error);
     }
+  };
+
+  const handleSearchInputChange = (e) => {
+    setSearchQuery(e.target.value);
+    onSearch(e.target.value); // Pass the search query to the parent component
   };
 
   return (
@@ -52,19 +54,21 @@ const Navbar = () => {
         </button>
 
         <ul className="navbar-ul">
-          <li className="search-bar">
-            <LuSearch className="search-icon" />
-            <input
-              type="text"
-              placeholder="Keresés..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="search-input"
-            />
-          </li>
+          {location.pathname === "/" && (
+            <li className="search-bar">
+              <LuSearch className="search-icon" />
+              <input
+                type="text"
+                placeholder="Keresés..."
+                value={searchQuery}
+                onChange={handleSearchInputChange}
+                className="search-input"
+              />
+            </li>
+          )}
 
           <li><Link to="/basket"> <LuShoppingBasket /> Kosár</Link></li>
-          <li><Link to="/notifications"> <LuBell /> Értesítések</Link></li>
+          <li><Link to="/notifications"> <LuTruck /> Rendelések</Link></li>
           <li><Link to="/aboutus"> <LuUsersRound /> Rólunk</Link></li>
 
           {isLoggedIn ? (

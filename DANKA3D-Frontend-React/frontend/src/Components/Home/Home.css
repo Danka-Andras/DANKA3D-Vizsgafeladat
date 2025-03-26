@@ -13,4 +13,32 @@
     gap: 20px;
     justify-content: center;
   }
+  .pagination-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .pagination-buttons button {
+    padding: 8px 12px;
+    background-color: turquoise;
+    color: #333;
+    cursor: pointer;
+    border: 3px solid black;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+  }
+  
+  .pagination-buttons button:hover {
+    background-color: #ddd;
+  }
+  
+  .pagination-buttons button.active {
+    background-color: orange;
+    color: black;
+    font-weight: bold;
+    border: 3px solid black;
+    border-radius: 8px;
+  }
+  
   

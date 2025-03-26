@@ -18,10 +18,38 @@ namespace backend.Controllers
 
         // GET: api/product
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<ProductModel>>> GetProducts()
+        public async Task<ActionResult<IEnumerable<ProductModel>>> GetProducts([FromQuery] int page = 1, [FromQuery] int pageSize = 30)
         {
-            return await _context.Products.ToListAsync();
+            if (page <= 0 || pageSize <= 0)
+            {
+                return BadRequest("Page and pageSize must be greater than 0.");
+            }
+
+            var totalItems = await _context.Products.CountAsync();
+            var totalPages = (int)Math.Ceiling(totalItems / (double)pageSize);
+
+            if (page > totalPages)
+            {
+                return BadRequest("Requested page exceeds total pages.");
+            }
+
+            var products = await _context.Products
+                .Skip((page - 1) * pageSize) // Átugorjuk az előző oldalak elemeit
+                .Take(pageSize) // Lekérjük az adott oldal méretét
+                .ToListAsync();
+
+            var response = new
+            {
+                Page = page,
+                PageSize = pageSize,
+                TotalItems = totalItems,
+                TotalPages = totalPages,
+                Products = products
+            };
+
+            return Ok(response);
         }
+
 
         // GET: api/product/{id}
         [HttpGet("{id}")]

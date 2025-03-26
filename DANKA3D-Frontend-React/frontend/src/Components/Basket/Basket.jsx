@@ -83,6 +83,11 @@ const Basket = () => {
     alert('A rendelés sikeresen megtörtént!');
   };
 
+  // Image click handler to open product details in a new tab
+  const handleImageClick = (productId) => {
+    window.open(`/product-details/${productId}`, '_blank');
+  };
+
   return (
     <div>
       <Navbar /> {/* A Navbar mindig megjelenik */}
@@ -100,7 +105,12 @@ const Basket = () => {
               {cart.map((item) => (
                 <li key={item.Id} className="cart-item">
                   <div className="item-image">
-                    <img src={item.Product.ImageUrl} alt={item.Product.Name} />
+                    <img
+                      src={item.Product.ImageUrl}
+                      alt={item.Product.Name}
+                      onClick={() => handleImageClick(item.Product.Id)} // Add click event to open product details
+                      style={{ cursor: 'pointer' }} // Indicate the image is clickable
+                    />
                   </div>
                   <div className="item-details">
                     <h3>{item.Product.Name}</h3>
