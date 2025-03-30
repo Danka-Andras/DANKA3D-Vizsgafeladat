@@ -3,42 +3,28 @@ import Navbar from '../Navbar/Navbar';
 import './Basket.css';
 
 const Basket = () => {
-  const [cart, setCart] = useState([]); // Kosár állapot
-  const [loading, setLoading] = useState(true); // Betöltési állapot
-  const [error, setError] = useState(null); // Hiba állapot
-  const [userId, setUserId] = useState(null); // Bejelentkezett felhasználó ID-ja
+  const [cart, setCart] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [userId, setUserId] = useState(null);
+  const [orderLoading, setOrderLoading] = useState(false);
 
-  // Kosár lekérése az API-ból
+  // Fetch user data and cart items
   const fetchCart = async () => {
     try {
-      const userResponse = await fetch('http://localhost:5277/api/user/me', {
-        credentials: 'include',
-      });
-
-      if (!userResponse.ok) {
-        throw new Error('Nem vagy bejelentkezve.');
-      }
+      const userResponse = await fetch('http://localhost:5277/api/user/me', { credentials: 'include' });
+      if (!userResponse.ok) throw new Error('Nem vagy bejelentkezve.');
 
       const userData = await userResponse.json();
       setUserId(userData.userId);
 
-      const response = await fetch(`http://localhost:5277/api/cart/${userData.userId}`, {
-        credentials: 'include',
-      });
+      const cartResponse = await fetch(`http://localhost:5277/api/cart/${userData.userId}`, { credentials: 'include' });
+      if (!cartResponse.ok) throw new Error('Hiba történt a kosár lekérésekor.');
 
-      if (!response.ok) {
-        throw new Error('Hiba történt a kosár lekérésekor');
-      }
-
-      const cartData = await response.json();
-
-      if (cartData.CartItems && Array.isArray(cartData.CartItems.$values)) {
-        setCart(cartData.CartItems.$values);
-      } else {
-        throw new Error('A válasz nem tartalmaz érvényes kosarat.');
-      }
-    } catch (error) {
-      setError(error.message);
+      const cartData = await cartResponse.json();
+      setCart(cartData.CartItems?.$values || []);
+    } catch (err) {
+      setError(err.message);
     } finally {
       setLoading(false);
     }
@@ -48,68 +34,130 @@ const Basket = () => {
     fetchCart();
   }, []);
 
-  // Kosár tételek mennyiségének frissítése
-  const updateQuantity = (itemId, newQuantity) => {
+  // Update quantity for a cart item
+  const updateQuantity = async (itemId, newQuantity) => {
     if (newQuantity < 1) return;
 
-    setCart(prevCart =>
-      prevCart.map(item =>
-        item.Id === itemId ? { ...item, Quantity: newQuantity } : item
-      )
+    try {
+      setCart((prevCart) =>
+        prevCart.map((item) => (item.Id === itemId ? { ...item, Quantity: newQuantity } : item))
+      );
+
+      const response = await fetch(`http://localhost:5277/api/cart/update-item/${itemId}?quantity=${newQuantity}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+      });
+
+      if (!response.ok) {
+        throw new Error('Nem sikerült frissíteni a mennyiséget.');
+      }
+    } catch (err) {
+      console.error(err);
+      setError('Nem sikerült frissíteni a mennyiséget.');
+    }
+  };
+
+  // Remove an item from the cart
+  const removeItem = async (itemId) => {
+    try {
+      setCart((prevCart) => prevCart.filter((item) => item.Id !== itemId));
+
+      const response = await fetch(`http://localhost:5277/api/cart/remove-item/${itemId}`, { method: 'DELETE' });
+
+      if (!response.ok) {
+        throw new Error('Nem sikerült eltávolítani a terméket.');
+      }
+    } catch (err) {
+      console.error(err);
+      setError('Nem sikerült eltávolítani a terméket.');
+    }
+  };
+
+  // Calculate total price for all items in the cart
+  const calculateTotal = () =>
+    Math.round(
+      cart.reduce((total, item) => total + (item?.Product?.Price || 0) * (item?.Quantity || 1), 0)
     );
 
-    fetch(`http://localhost:5277/api/cart/update-item/${itemId}?quantity=${newQuantity}`, {
-      method: 'PUT',
-      headers: { 'Content-Type': 'application/json' },
-    }).catch((error) => setError(error.message));
-  };
-
-  // Tárgy eltávolítása a kosárból
-  const removeItem = (itemId) => {
-    setCart(prevCart => prevCart.filter(item => item.Id !== itemId));
-
-    fetch(`http://localhost:5277/api/cart/remove-item/${itemId}`, {
-      method: 'DELETE',
-    }).catch((error) => setError(error.message));
-  };
-
-  // Összeg kiszámítása
-  const calculateTotal = () => {
-    return cart.reduce((total, item) => total + item.Product.Price * item.Quantity, 0).toFixed(2);
-  };
-
-  // Rendelés gomb
-  const handleOrder = () => {
-    alert('A rendelés sikeresen megtörtént!');
-  };
-
-  // Image click handler to open product details in a new tab
-  const handleImageClick = (productId) => {
-    window.open(`/product-details/${productId}`, '_blank');
-  };
+    const handleOrder = async () => {
+      if (!userId) {
+        setError("Nem vagy bejelentkezve, kérlek jelentkezz be a rendeléshez.");
+        return;
+      }
+    
+      try {
+        // Validate the cart before processing
+        if (!cart || cart.length === 0) {
+          throw new Error("A kosár üres. Kérlek, adj hozzá termékeket a rendelés leadásához.");
+        }
+    
+        // Prepare the JSON payload according to the expected format
+        const orderPayload = {
+          id: 0,  // The ID will be generated by the server
+          userId: userId || 0,  // User ID
+          totalPrice: calculateTotal() || 0,  // Total price
+          status: "Pending",  // Default order status
+          createdAt: new Date().toISOString(),  // Timestamp
+          orderProducts: cart.map((item) => ({
+            id: 0,  // The ID will be generated by the server
+            orderId: 0,  // The Order ID will be linked after the order is created
+            productId: item.Product.Id,
+            quantity: item.Quantity,
+            price: item.Product.Price,
+            imageUrl: item.Product.ImageUrl || "string",  // Fallback for missing image URL
+          })),
+        };
+    
+        // Log the payload for debugging
+        console.log("Generated order payload:", JSON.stringify(orderPayload, null, 2));
+    
+        // Send the payload to the backend
+        const response = await fetch("http://localhost:5277/api/orders", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          credentials: "include",
+          body: JSON.stringify(orderPayload),
+        });
+    
+        // Handle response from backend
+        if (!response.ok) {
+          const errorData = await response.json();
+          throw new Error(errorData.message || "Hiba történt a rendelés leadása során.");
+        }
+    
+        const responseData = await response.json();
+        alert("A rendelés sikeresen leadva!");
+        setCart([]); // Clear the cart upon successful order submission
+      } catch (error) {
+        console.error("Rendelési hiba:", error);
+        setError(error.message || "Ismeretlen hiba történt.");
+      }
+    };
+    
 
   return (
     <div>
-      <Navbar /> {/* A Navbar mindig megjelenik */}
-
+      <Navbar />
       <div className="basket-container">
         <h1>Kosár</h1>
 
-        {loading && <p>Loading...</p>}
-        {error && <p>{error}</p>}
-        {!loading && !error && userId && cart.length === 0 && <p>A kosár üres.</p>}
+        {loading && <p>Betöltés...</p>}
+        {error && <p className="error-message">{error}</p>}
+        {!loading && !error && cart.length === 0 && <p>A kosár üres.</p>}
 
-        {!loading && !error && userId && cart.length > 0 && (
+        {!loading && !error && cart.length > 0 && (
           <>
             <ul className="cart-list">
               {cart.map((item) => (
                 <li key={item.Id} className="cart-item">
                   <div className="item-image">
                     <img
-                      src={item.Product.ImageUrl}
+                      src={item.Product.ImageUrl || 'https://via.placeholder.com/150'}
                       alt={item.Product.Name}
-                      onClick={() => handleImageClick(item.Product.Id)} // Add click event to open product details
-                      style={{ cursor: 'pointer' }} // Indicate the image is clickable
+                      onClick={() => window.open(`/product-details/${item.Product.Id}`, '_blank')}
+                      style={{ cursor: 'pointer' }}
                     />
                   </div>
                   <div className="item-details">
@@ -131,7 +179,9 @@ const Basket = () => {
               <h2>Végösszeg: {calculateTotal()} Ft</h2>
             </div>
             <div className="order-button">
-              <button onClick={handleOrder}>Rendelés</button>
+              <button onClick={handleOrder} disabled={orderLoading || cart.length === 0}>
+                {orderLoading ? 'Rendelés folyamatban...' : 'Rendelés'}
+              </button>
             </div>
           </>
         )}

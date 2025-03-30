@@ -573,3 +573,4 @@ C:\Users\kisku\Desktop\AM3D\DANKA3D-Backend-ASP.NET\backend\backend\obj\Debug\ne
 C:\Users\kisku\Desktop\AM3D\DANKA3D-Backend-ASP.NET\backend\backend\obj\Debug\net8.0\backend.pdb
 C:\Users\kisku\Desktop\AM3D\DANKA3D-Backend-ASP.NET\backend\backend\obj\Debug\net8.0\backend.genruntimeconfig.cache
 C:\Users\kisku\Desktop\AM3D\DANKA3D-Backend-ASP.NET\backend\backend\obj\Debug\net8.0\ref\backend.dll
+C:\Users\kisku\Desktop\AM3D\DANKA3D-Backend-ASP.NET\backend\backend\bin\Debug\net8.0\Newtonsoft.Json.dll

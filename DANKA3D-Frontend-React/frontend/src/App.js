@@ -7,6 +7,7 @@ import ForgotPassword from './Components/LoginRegister/ForgotPassword';
 import Basket from './Components/Basket/Basket';
 import ProductDetails from "./Components/ProductDetails/ProductDetails";
 import ProtectedRoute from "./Components/Auth/ProtectedAuth";
+import Orders from "./Components/Orders/Orders";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="/forgotpassword" element={<ForgotPassword />} />
+      <Route path="/orders" element={<Orders />} />
       <Route 
         path="/basket" 
         element={

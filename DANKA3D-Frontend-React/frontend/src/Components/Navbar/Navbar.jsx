@@ -68,7 +68,7 @@ const Navbar = ({ onSearch }) => {
           )}
 
           <li><Link to="/basket"> <LuShoppingBasket /> Kosár</Link></li>
-          <li><Link to="/notifications"> <LuTruck /> Rendelések</Link></li>
+          <li><Link to="/orders"> <LuTruck /> Rendelések</Link></li>
           <li><Link to="/aboutus"> <LuUsersRound /> Rólunk</Link></li>
 
           {isLoggedIn ? (
