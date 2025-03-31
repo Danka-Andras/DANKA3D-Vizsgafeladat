@@ -1,57 +1,57 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\kisku\\Desktop\\AM3D\\DANKA3D-Backend-ASP.NET\\backend\\",
+  "WorkspaceRootPath": "D:\\DankaAndras14F\\AM3D\\DANKA3D-Backend-ASP.NET\\backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9AB87A50-9919-4AA2-97B7-931A65B9D2AF}|backend\\backend.csproj|c:\\users\\kisku\\desktop\\am3d\\danka3d-backend-asp.net\\backend\\backend\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9AB87A50-9919-4AA2-97B7-931A65B9D2AF}|backend\\backend.csproj|d:\\dankaandras14f\\am3d\\danka3d-backend-asp.net\\backend\\backend\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9AB87A50-9919-4AA2-97B7-931A65B9D2AF}|backend\\backend.csproj|solutionrelative:backend\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9AB87A50-9919-4AA2-97B7-931A65B9D2AF}|backend\\backend.csproj|c:\\users\\kisku\\desktop\\am3d\\danka3d-backend-asp.net\\backend\\backend\\models\\orderproductmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9AB87A50-9919-4AA2-97B7-931A65B9D2AF}|backend\\backend.csproj|d:\\dankaandras14f\\am3d\\danka3d-backend-asp.net\\backend\\backend\\models\\orderproductmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9AB87A50-9919-4AA2-97B7-931A65B9D2AF}|backend\\backend.csproj|solutionrelative:backend\\models\\orderproductmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9AB87A50-9919-4AA2-97B7-931A65B9D2AF}|backend\\backend.csproj|c:\\users\\kisku\\desktop\\am3d\\danka3d-backend-asp.net\\backend\\backend\\models\\ordermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9AB87A50-9919-4AA2-97B7-931A65B9D2AF}|backend\\backend.csproj|d:\\dankaandras14f\\am3d\\danka3d-backend-asp.net\\backend\\backend\\models\\ordermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9AB87A50-9919-4AA2-97B7-931A65B9D2AF}|backend\\backend.csproj|solutionrelative:backend\\models\\ordermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9AB87A50-9919-4AA2-97B7-931A65B9D2AF}|backend\\backend.csproj|c:\\users\\kisku\\desktop\\am3d\\danka3d-backend-asp.net\\backend\\backend\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9AB87A50-9919-4AA2-97B7-931A65B9D2AF}|backend\\backend.csproj|d:\\dankaandras14f\\am3d\\danka3d-backend-asp.net\\backend\\backend\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9AB87A50-9919-4AA2-97B7-931A65B9D2AF}|backend\\backend.csproj|solutionrelative:backend\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9AB87A50-9919-4AA2-97B7-931A65B9D2AF}|backend\\backend.csproj|c:\\users\\kisku\\desktop\\am3d\\danka3d-backend-asp.net\\backend\\backend\\models\\productmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9AB87A50-9919-4AA2-97B7-931A65B9D2AF}|backend\\backend.csproj|d:\\dankaandras14f\\am3d\\danka3d-backend-asp.net\\backend\\backend\\models\\productmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9AB87A50-9919-4AA2-97B7-931A65B9D2AF}|backend\\backend.csproj|solutionrelative:backend\\models\\productmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9AB87A50-9919-4AA2-97B7-931A65B9D2AF}|backend\\backend.csproj|c:\\users\\kisku\\desktop\\am3d\\danka3d-backend-asp.net\\backend\\backend\\datacontext\\databasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9AB87A50-9919-4AA2-97B7-931A65B9D2AF}|backend\\backend.csproj|d:\\dankaandras14f\\am3d\\danka3d-backend-asp.net\\backend\\backend\\datacontext\\databasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9AB87A50-9919-4AA2-97B7-931A65B9D2AF}|backend\\backend.csproj|solutionrelative:backend\\datacontext\\databasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9AB87A50-9919-4AA2-97B7-931A65B9D2AF}|backend\\backend.csproj|c:\\users\\kisku\\desktop\\am3d\\danka3d-backend-asp.net\\backend\\backend\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9AB87A50-9919-4AA2-97B7-931A65B9D2AF}|backend\\backend.csproj|d:\\dankaandras14f\\am3d\\danka3d-backend-asp.net\\backend\\backend\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9AB87A50-9919-4AA2-97B7-931A65B9D2AF}|backend\\backend.csproj|solutionrelative:backend\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9AB87A50-9919-4AA2-97B7-931A65B9D2AF}|backend\\backend.csproj|c:\\users\\kisku\\desktop\\am3d\\danka3d-backend-asp.net\\backend\\backend\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9AB87A50-9919-4AA2-97B7-931A65B9D2AF}|backend\\backend.csproj|d:\\dankaandras14f\\am3d\\danka3d-backend-asp.net\\backend\\backend\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9AB87A50-9919-4AA2-97B7-931A65B9D2AF}|backend\\backend.csproj|solutionrelative:backend\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9AB87A50-9919-4AA2-97B7-931A65B9D2AF}|backend\\backend.csproj|c:\\users\\kisku\\desktop\\am3d\\danka3d-backend-asp.net\\backend\\backend\\models\\cartitemmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9AB87A50-9919-4AA2-97B7-931A65B9D2AF}|backend\\backend.csproj|d:\\dankaandras14f\\am3d\\danka3d-backend-asp.net\\backend\\backend\\models\\cartitemmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9AB87A50-9919-4AA2-97B7-931A65B9D2AF}|backend\\backend.csproj|solutionrelative:backend\\models\\cartitemmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9AB87A50-9919-4AA2-97B7-931A65B9D2AF}|backend\\backend.csproj|c:\\users\\kisku\\desktop\\am3d\\danka3d-backend-asp.net\\backend\\backend\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9AB87A50-9919-4AA2-97B7-931A65B9D2AF}|backend\\backend.csproj|d:\\dankaandras14f\\am3d\\danka3d-backend-asp.net\\backend\\backend\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9AB87A50-9919-4AA2-97B7-931A65B9D2AF}|backend\\backend.csproj|solutionrelative:backend\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9AB87A50-9919-4AA2-97B7-931A65B9D2AF}|backend\\backend.csproj|c:\\users\\kisku\\desktop\\am3d\\danka3d-backend-asp.net\\backend\\backend\\models\\cartmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9AB87A50-9919-4AA2-97B7-931A65B9D2AF}|backend\\backend.csproj|d:\\dankaandras14f\\am3d\\danka3d-backend-asp.net\\backend\\backend\\models\\cartmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9AB87A50-9919-4AA2-97B7-931A65B9D2AF}|backend\\backend.csproj|solutionrelative:backend\\models\\cartmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9AB87A50-9919-4AA2-97B7-931A65B9D2AF}|backend\\backend.csproj|c:\\users\\kisku\\desktop\\am3d\\danka3d-backend-asp.net\\backend\\backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9AB87A50-9919-4AA2-97B7-931A65B9D2AF}|backend\\backend.csproj|d:\\dankaandras14f\\am3d\\danka3d-backend-asp.net\\backend\\backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9AB87A50-9919-4AA2-97B7-931A65B9D2AF}|backend\\backend.csproj|solutionrelative:backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9AB87A50-9919-4AA2-97B7-931A65B9D2AF}|backend\\backend.csproj|c:\\users\\kisku\\desktop\\am3d\\danka3d-backend-asp.net\\backend\\backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{9AB87A50-9919-4AA2-97B7-931A65B9D2AF}|backend\\backend.csproj|d:\\dankaandras14f\\am3d\\danka3d-backend-asp.net\\backend\\backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{9AB87A50-9919-4AA2-97B7-931A65B9D2AF}|backend\\backend.csproj|solutionrelative:backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
@@ -68,24 +68,23 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "OrderProductModel.cs",
-              "DocumentMoniker": "C:\\Users\\kisku\\Desktop\\AM3D\\DANKA3D-Backend-ASP.NET\\backend\\backend\\Models\\OrderProductModel.cs",
+              "DocumentMoniker": "D:\\DankaAndras14F\\AM3D\\DANKA3D-Backend-ASP.NET\\backend\\backend\\Models\\OrderProductModel.cs",
               "RelativeDocumentMoniker": "backend\\Models\\OrderProductModel.cs",
-              "ToolTip": "C:\\Users\\kisku\\Desktop\\AM3D\\DANKA3D-Backend-ASP.NET\\backend\\backend\\Models\\OrderProductModel.cs",
+              "ToolTip": "D:\\DankaAndras14F\\AM3D\\DANKA3D-Backend-ASP.NET\\backend\\backend\\Models\\OrderProductModel.cs",
               "RelativeToolTip": "backend\\Models\\OrderProductModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T16:59:38.509Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-29T16:59:38.509Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "OrderController.cs",
-              "DocumentMoniker": "C:\\Users\\kisku\\Desktop\\AM3D\\DANKA3D-Backend-ASP.NET\\backend\\backend\\Controllers\\OrderController.cs",
+              "DocumentMoniker": "D:\\DankaAndras14F\\AM3D\\DANKA3D-Backend-ASP.NET\\backend\\backend\\Controllers\\OrderController.cs",
               "RelativeDocumentMoniker": "backend\\Controllers\\OrderController.cs",
-              "ToolTip": "C:\\Users\\kisku\\Desktop\\AM3D\\DANKA3D-Backend-ASP.NET\\backend\\backend\\Controllers\\OrderController.cs",
+              "ToolTip": "D:\\DankaAndras14F\\AM3D\\DANKA3D-Backend-ASP.NET\\backend\\backend\\Controllers\\OrderController.cs",
               "RelativeToolTip": "backend\\Controllers\\OrderController.cs",
-              "ViewState": "AgIAAF4AAAAAAAAAAAAYwDsAAAA7AAAAAAAAAA==",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAzwGkAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-29T15:26:09.86Z",
               "EditorCaption": ""
@@ -94,144 +93,133 @@
               "$type": "Document",
               "DocumentIndex": 7,
               "Title": "ProductController.cs",
-              "DocumentMoniker": "C:\\Users\\kisku\\Desktop\\AM3D\\DANKA3D-Backend-ASP.NET\\backend\\backend\\Controllers\\ProductController.cs",
+              "DocumentMoniker": "D:\\DankaAndras14F\\AM3D\\DANKA3D-Backend-ASP.NET\\backend\\backend\\Controllers\\ProductController.cs",
               "RelativeDocumentMoniker": "backend\\Controllers\\ProductController.cs",
-              "ToolTip": "C:\\Users\\kisku\\Desktop\\AM3D\\DANKA3D-Backend-ASP.NET\\backend\\backend\\Controllers\\ProductController.cs",
+              "ToolTip": "D:\\DankaAndras14F\\AM3D\\DANKA3D-Backend-ASP.NET\\backend\\backend\\Controllers\\ProductController.cs",
               "RelativeToolTip": "backend\\Controllers\\ProductController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAACGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T17:57:59.262Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-19T17:57:59.262Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\kisku\\Desktop\\AM3D\\DANKA3D-Backend-ASP.NET\\backend\\backend\\Program.cs",
+              "DocumentMoniker": "D:\\DankaAndras14F\\AM3D\\DANKA3D-Backend-ASP.NET\\backend\\backend\\Program.cs",
               "RelativeDocumentMoniker": "backend\\Program.cs",
-              "ToolTip": "C:\\Users\\kisku\\Desktop\\AM3D\\DANKA3D-Backend-ASP.NET\\backend\\backend\\Program.cs",
+              "ToolTip": "D:\\DankaAndras14F\\AM3D\\DANKA3D-Backend-ASP.NET\\backend\\backend\\Program.cs",
               "RelativeToolTip": "backend\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T14:41:58.175Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-15T14:41:58.175Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "DatabaseContext.cs",
-              "DocumentMoniker": "C:\\Users\\kisku\\Desktop\\AM3D\\DANKA3D-Backend-ASP.NET\\backend\\backend\\DataContext\\DatabaseContext.cs",
+              "DocumentMoniker": "D:\\DankaAndras14F\\AM3D\\DANKA3D-Backend-ASP.NET\\backend\\backend\\DataContext\\DatabaseContext.cs",
               "RelativeDocumentMoniker": "backend\\DataContext\\DatabaseContext.cs",
-              "ToolTip": "C:\\Users\\kisku\\Desktop\\AM3D\\DANKA3D-Backend-ASP.NET\\backend\\backend\\DataContext\\DatabaseContext.cs",
+              "ToolTip": "D:\\DankaAndras14F\\AM3D\\DANKA3D-Backend-ASP.NET\\backend\\backend\\DataContext\\DatabaseContext.cs",
               "RelativeToolTip": "backend\\DataContext\\DatabaseContext.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAQwBkAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T14:59:27.883Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-15T14:59:27.883Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "ProductModel.cs",
-              "DocumentMoniker": "C:\\Users\\kisku\\Desktop\\AM3D\\DANKA3D-Backend-ASP.NET\\backend\\backend\\Models\\ProductModel.cs",
+              "DocumentMoniker": "D:\\DankaAndras14F\\AM3D\\DANKA3D-Backend-ASP.NET\\backend\\backend\\Models\\ProductModel.cs",
               "RelativeDocumentMoniker": "backend\\Models\\ProductModel.cs",
-              "ToolTip": "C:\\Users\\kisku\\Desktop\\AM3D\\DANKA3D-Backend-ASP.NET\\backend\\backend\\Models\\ProductModel.cs",
+              "ToolTip": "D:\\DankaAndras14F\\AM3D\\DANKA3D-Backend-ASP.NET\\backend\\backend\\Models\\ProductModel.cs",
               "RelativeToolTip": "backend\\Models\\ProductModel.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T14:56:56.712Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-15T14:56:56.712Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "OrderModel.cs",
-              "DocumentMoniker": "C:\\Users\\kisku\\Desktop\\AM3D\\DANKA3D-Backend-ASP.NET\\backend\\backend\\Models\\OrderModel.cs",
+              "DocumentMoniker": "D:\\DankaAndras14F\\AM3D\\DANKA3D-Backend-ASP.NET\\backend\\backend\\Models\\OrderModel.cs",
               "RelativeDocumentMoniker": "backend\\Models\\OrderModel.cs",
-              "ToolTip": "C:\\Users\\kisku\\Desktop\\AM3D\\DANKA3D-Backend-ASP.NET\\backend\\backend\\Models\\OrderModel.cs",
+              "ToolTip": "D:\\DankaAndras14F\\AM3D\\DANKA3D-Backend-ASP.NET\\backend\\backend\\Models\\OrderModel.cs",
               "RelativeToolTip": "backend\\Models\\OrderModel.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAgAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T15:19:23.134Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-29T15:19:23.134Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "UserModel.cs",
-              "DocumentMoniker": "C:\\Users\\kisku\\Desktop\\AM3D\\DANKA3D-Backend-ASP.NET\\backend\\backend\\Models\\UserModel.cs",
+              "DocumentMoniker": "D:\\DankaAndras14F\\AM3D\\DANKA3D-Backend-ASP.NET\\backend\\backend\\Models\\UserModel.cs",
               "RelativeDocumentMoniker": "backend\\Models\\UserModel.cs",
-              "ToolTip": "C:\\Users\\kisku\\Desktop\\AM3D\\DANKA3D-Backend-ASP.NET\\backend\\backend\\Models\\UserModel.cs",
+              "ToolTip": "D:\\DankaAndras14F\\AM3D\\DANKA3D-Backend-ASP.NET\\backend\\backend\\Models\\UserModel.cs",
               "RelativeToolTip": "backend\\Models\\UserModel.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAAwBYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T14:51:08.073Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-15T14:51:08.073Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
               "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\kisku\\Desktop\\AM3D\\DANKA3D-Backend-ASP.NET\\backend\\backend\\Controllers\\UserController.cs",
+              "DocumentMoniker": "D:\\DankaAndras14F\\AM3D\\DANKA3D-Backend-ASP.NET\\backend\\backend\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "backend\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\kisku\\Desktop\\AM3D\\DANKA3D-Backend-ASP.NET\\backend\\backend\\Controllers\\UserController.cs",
+              "ToolTip": "D:\\DankaAndras14F\\AM3D\\DANKA3D-Backend-ASP.NET\\backend\\backend\\Controllers\\UserController.cs",
               "RelativeToolTip": "backend\\Controllers\\UserController.cs",
               "ViewState": "AgIAAGYAAAAAAAAAAAAAwHwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T15:08:16.317Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-15T15:08:16.317Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
               "Title": "CartModel.cs",
-              "DocumentMoniker": "C:\\Users\\kisku\\Desktop\\AM3D\\DANKA3D-Backend-ASP.NET\\backend\\backend\\Models\\CartModel.cs",
+              "DocumentMoniker": "D:\\DankaAndras14F\\AM3D\\DANKA3D-Backend-ASP.NET\\backend\\backend\\Models\\CartModel.cs",
               "RelativeDocumentMoniker": "backend\\Models\\CartModel.cs",
-              "ToolTip": "C:\\Users\\kisku\\Desktop\\AM3D\\DANKA3D-Backend-ASP.NET\\backend\\backend\\Models\\CartModel.cs",
+              "ToolTip": "D:\\DankaAndras14F\\AM3D\\DANKA3D-Backend-ASP.NET\\backend\\backend\\Models\\CartModel.cs",
               "RelativeToolTip": "backend\\Models\\CartModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAIBJwBIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T15:06:25.613Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-22T15:06:25.613Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
               "Title": "CartItemModel.cs",
-              "DocumentMoniker": "C:\\Users\\kisku\\Desktop\\AM3D\\DANKA3D-Backend-ASP.NET\\backend\\backend\\Models\\CartItemModel.cs",
+              "DocumentMoniker": "D:\\DankaAndras14F\\AM3D\\DANKA3D-Backend-ASP.NET\\backend\\backend\\Models\\CartItemModel.cs",
               "RelativeDocumentMoniker": "backend\\Models\\CartItemModel.cs",
-              "ToolTip": "C:\\Users\\kisku\\Desktop\\AM3D\\DANKA3D-Backend-ASP.NET\\backend\\backend\\Models\\CartItemModel.cs",
+              "ToolTip": "D:\\DankaAndras14F\\AM3D\\DANKA3D-Backend-ASP.NET\\backend\\backend\\Models\\CartItemModel.cs",
               "RelativeToolTip": "backend\\Models\\CartItemModel.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAAwBgAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T15:07:06.008Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-22T15:07:06.008Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
               "Title": "CartController.cs",
-              "DocumentMoniker": "C:\\Users\\kisku\\Desktop\\AM3D\\DANKA3D-Backend-ASP.NET\\backend\\backend\\Controllers\\CartController.cs",
+              "DocumentMoniker": "D:\\DankaAndras14F\\AM3D\\DANKA3D-Backend-ASP.NET\\backend\\backend\\Controllers\\CartController.cs",
               "RelativeDocumentMoniker": "backend\\Controllers\\CartController.cs",
-              "ToolTip": "C:\\Users\\kisku\\Desktop\\AM3D\\DANKA3D-Backend-ASP.NET\\backend\\backend\\Controllers\\CartController.cs",
+              "ToolTip": "D:\\DankaAndras14F\\AM3D\\DANKA3D-Backend-ASP.NET\\backend\\backend\\Controllers\\CartController.cs",
               "RelativeToolTip": "backend\\Controllers\\CartController.cs",
               "ViewState": "AgIAAIUAAAAAAAAAAAAAwI8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T15:10:43.47Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-22T15:10:43.47Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
               "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\kisku\\Desktop\\AM3D\\DANKA3D-Backend-ASP.NET\\backend\\backend\\appsettings.json",
+              "DocumentMoniker": "D:\\DankaAndras14F\\AM3D\\DANKA3D-Backend-ASP.NET\\backend\\backend\\appsettings.json",
               "RelativeDocumentMoniker": "backend\\appsettings.json",
-              "ToolTip": "C:\\Users\\kisku\\Desktop\\AM3D\\DANKA3D-Backend-ASP.NET\\backend\\backend\\appsettings.json",
+              "ToolTip": "D:\\DankaAndras14F\\AM3D\\DANKA3D-Backend-ASP.NET\\backend\\backend\\appsettings.json",
               "RelativeToolTip": "backend\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-15T14:44:43.241Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-15T14:44:43.241Z"
             }
           ]
         }

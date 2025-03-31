@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import Navbar from '../Navbar/Navbar';
 import './ProductDetails.css';
 
 const ProductDetails = () => {
@@ -8,7 +9,6 @@ const ProductDetails = () => {
   const [quantity, setQuantity] = useState(1); // State for quantity
   const [isLoading, setIsLoading] = useState(true); // Loading state
   const [error, setError] = useState(null); // Error message state
-  const [successMessage, setSuccessMessage] = useState(''); // Success message state
 
   // Fetch product details by productId
   useEffect(() => {
@@ -70,7 +70,7 @@ const ProductDetails = () => {
         throw new Error('Nem sikerült hozzáadni a terméket a kosárhoz.');
       }
 
-      setSuccessMessage('Sikeresen hozzáadtad a kosárhoz!');
+      alert("Hozzáadva a kosárhoz");;
     } catch (err) {
       setError('Hiba történt a kosárhoz adás során.');
     }
@@ -86,12 +86,13 @@ const ProductDetails = () => {
 
   return (
     <div className="product-details-container">
+      <Navbar />
       <h1>{product.name}</h1>
       <img src={product.imageUrl} alt={product.name} className="product-image" />
       <p>{product.description}</p>
-      <p><strong>Price:</strong> {product.price}Ft</p>
-      <p><strong>Stock:</strong> {product.stock}</p>
-      <p><strong>Color:</strong> {product.color}</p>
+      <p><strong>Ár/db:</strong> {product.price}Ft</p>
+      <p><strong>Készlet:</strong> {product.stock}</p>
+      <p><strong>Szín:</strong> {product.color}</p>
       
       <div className="quantity-container">
         <label htmlFor="quantity">Mennyiség:</label>
@@ -106,7 +107,6 @@ const ProductDetails = () => {
       </div>
 
       <button onClick={handleAddToCart} className="add-to-cart-button">Kosárhoz adás</button>
-      {successMessage && <p className="success-message">{successMessage}</p>}
     </div>
   );
 };

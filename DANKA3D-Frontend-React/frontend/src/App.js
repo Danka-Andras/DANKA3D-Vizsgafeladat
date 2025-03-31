@@ -8,6 +8,9 @@ import Basket from './Components/Basket/Basket';
 import ProductDetails from "./Components/ProductDetails/ProductDetails";
 import ProtectedRoute from "./Components/Auth/ProtectedAuth";
 import Orders from "./Components/Orders/Orders";
+import AboutUs from "./Components/AboutUs/AboutUs"
+import Terms from "./Components/Terms/Terms";
+import Privacy from "./Components/Privacy/Privacy";
 
 function App() {
   return (
@@ -17,6 +20,9 @@ function App() {
       <Route path="/register" element={<Register />} />
       <Route path="/forgotpassword" element={<ForgotPassword />} />
       <Route path="/orders" element={<Orders />} />
+      <Route path="/aboutus" element={<AboutUs />} />
+      <Route path="/terms" element={<Terms />} />
+      <Route path="/privacy" element={<Privacy />} />
       <Route 
         path="/basket" 
         element={
