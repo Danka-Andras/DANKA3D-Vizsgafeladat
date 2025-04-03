@@ -1,5 +1,6 @@
 using backend.DataContext;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.FileProviders;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -53,6 +54,13 @@ if (app.Environment.IsDevelopment())
 
 // Middleware setup
 //app.UseHttpsRedirection();  // Törölve a HTTPS átirányítást
+
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new PhysicalFileProvider(
+        Path.Combine(Directory.GetCurrentDirectory(), "images")),
+    RequestPath = "/Images"
+});
 
 app.UseCors(MyAllowSpecificOrigins);
 

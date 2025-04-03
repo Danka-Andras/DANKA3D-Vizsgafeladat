@@ -91,7 +91,7 @@ const ProductDetails = () => {
       <img src={product.imageUrl} alt={product.name} className="product-image" />
       <p>{product.description}</p>
       <p><strong>Ár/db:</strong> {product.price}Ft</p>
-      <p><strong>Készlet:</strong> {product.stock}</p>
+      {/* <p><strong>Készlet:</strong> {product.stock}</p> */}
       <p><strong>Szín:</strong> {product.color}</p>
       
       <div className="quantity-container">

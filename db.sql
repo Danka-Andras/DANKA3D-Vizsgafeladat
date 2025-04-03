@@ -60,5 +60,5 @@ CREATE TABLE order_products (
 
 INSERT INTO products (name, description, price, stock, color, image_url) 
 VALUES 
-('3D Nyomtatott Egérpad', 'Kiváló minőségű 3D nyomtatott egérpad, ergonomikus kialakítással.', 5832.35, 50, 'fekete', 'https://th.bing.com/th/id/R.3bc85f732f7580d342ce5c86648f4187?rik=WG41pOsX%2b1c7oQ&riu=http%3a%2f%2fwww.aniel-wallpapers.hu%2fcicak1%2fcica_kutya_04.jpg&ehk=uNbGIKtyJJc8Nzs1E0%2bbOMcVa4EP4p2426p4%2f6aqkDo%3d&risl=&pid=ImgRaw&r=0'),
-('Húsvéti ajtódísz', 'Kiváló minőségű 3D nyomtatott ajtódísz.', 2000, 100, 'fehér', 'AM3D/DANKA3D-Frontend-React/frontend/public/Images/husvetiajtodisz.jpg'),
+('Teszt termék', 'Ez csak egy teszt termék', 1000, 50, 'fekete', 'https://th.bing.com/th/id/R.3bc85f732f7580d342ce5c86648f4187?rik=WG41pOsX%2b1c7oQ&riu=http%3a%2f%2fwww.aniel-wallpapers.hu%2fcicak1%2fcica_kutya_04.jpg&ehk=uNbGIKtyJJc8Nzs1E0%2bbOMcVa4EP4p2426p4%2f6aqkDo%3d&risl=&pid=ImgRaw&r=0'),
+('Húsvéti ajtódísz', 'Kiváló minőségű 3D nyomtatott ajtódísz.', 2000, 100, 'fehér', 'http://localhost:5277/images/husvetiajtodisz.jpg');
