@@ -60,5 +60,16 @@ CREATE TABLE order_products (
 
 INSERT INTO products (name, description, price, stock, color, image_url) 
 VALUES 
-('Teszt termék', 'Ez csak egy teszt termék', 1000, 50, 'fekete', 'https://th.bing.com/th/id/R.3bc85f732f7580d342ce5c86648f4187?rik=WG41pOsX%2b1c7oQ&riu=http%3a%2f%2fwww.aniel-wallpapers.hu%2fcicak1%2fcica_kutya_04.jpg&ehk=uNbGIKtyJJc8Nzs1E0%2bbOMcVa4EP4p2426p4%2f6aqkDo%3d&risl=&pid=ImgRaw&r=0'),
-('Húsvéti ajtódísz', 'Kiváló minőségű 3D nyomtatott ajtódísz.', 2000, 100, 'fehér', 'http://localhost:5277/images/husvetiajtodisz.jpg');
+('Macska', 'Szőrős', 100000, 1, 'fekete', 'https://th.bing.com/th/id/R.3bc85f732f7580d342ce5c86648f4187?rik=WG41pOsX%2b1c7oQ&riu=http%3a%2f%2fwww.aniel-wallpapers.hu%2fcicak1%2fcica_kutya_04.jpg&ehk=uNbGIKtyJJc8Nzs1E0%2bbOMcVa4EP4p2426p4%2f6aqkDo%3d&risl=&pid=ImgRaw&r=0'),
+('Húsvéti ajtódísz (jobb oldal)', 'Kiváló minőségű 3D nyomtatott ajtódísz.', 2000, 100, 'fehér', 'http://localhost:5277/images/husvetiajtodisz.jpg'),
+('Húsvéti ajtódísz (bal oldal)', 'Kiváló minőségű 3D nyomtatott ajtódísz.', 2500, 80, 'fehér', 'http://localhost:5277/images/husvetiajtodisz2.jpg'),
+('Húsvéti kosár', 'Kiváló minőségű 3D nyomtatott kosár.', 3000, 50, 'kék', 'http://localhost:5277/images/husvetikosar.jpg'),
+('Húsvéti nyulak', 'Kiváló minőségű 3D húsvéti nyulak.', 1500, 50, 'fehér, barna', 'http://localhost:5277/images/husvetinyulak.jpg'),
+('Húsvéti meglepetés tojás', 'Kiváló minőségű 3D nyomtatott meglepetés tojás.', 1500, 100, 'fehér', 'http://localhost:5277/images/meglapatestojas.jpg'),
+('Húsvéti kép kirakó', 'Kiváló minőségű 3D nyomtatott kép kirakó.', 2500, 80, 'fekete', 'http://localhost:5277/images/nyulaskirako.jpg'),
+('Húsvéti nyúl dísz', 'Kiváló minőségű 3D nyomtatott dísz.', 1000, 100, 'piros', 'http://localhost:5277/images/nyuldisz.jpg'),
+('Húsvéti tojás tartó', 'Kiváló minőségű 3D nyomtatott tojás tartó.', 800, 100, 'rózsaszín', 'http://localhost:5277/images/nyulastojas.jpg'),
+('Húsvéti répatartó dísz (2 darab)', 'Kiváló minőségű 3D nyomtatott répatartó dísz.', 2000, 50, 'barna', 'http://localhost:5277/images/repatarto2.jpg'),
+('Húsvéti répatartó dísz (4 darab)', 'Kiváló minőségű 3D répatartó dísz.', 3500, 50, 'barna', 'http://localhost:5277/images/repatarto4.jpg'),
+('Húsvéti birka dísz', 'Kiváló minőségű 3D nyomtatott birka dísz.', 1500, 40, 'fehér', 'http://localhost:5277/images/szerelmesbirkak.jpg');
+
