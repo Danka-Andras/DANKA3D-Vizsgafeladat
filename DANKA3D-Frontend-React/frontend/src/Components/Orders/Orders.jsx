@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '../Navbar/Navbar';
 import './Orders.css';
+import { useNavigate, Link } from "react-router-dom";
 
 const Orders = () => {
   const [orders, setOrders] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
   // Fetch user orders
   const fetchUserOrders = async () => {
@@ -19,11 +21,13 @@ const Orders = () => {
       });
 
       if (!userResponse.ok) {
+        navigate("/login");
         throw new Error('Nem található bejelentkezett felhasználó.');
       }
 
       const userData = await userResponse.json();
       if (!userData?.userId) {
+        navigate("/login");
         throw new Error('Hibás felhasználói adatok.');
       }
 
@@ -99,8 +103,9 @@ const Orders = () => {
   return (
     <div className="orders-container">
         <Navbar />
-      <h1>Rendeléseim</h1>
-
+        <h1><span></span></h1>
+        <h1><span></span></h1>
+        <h1><span></span></h1>
       {loading && <p>Rendelések betöltése...</p>}
       {error && <p className="error-message">{error}</p>}
 

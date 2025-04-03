@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '../Navbar/Navbar';
+import { useNavigate, Link } from "react-router-dom";
 import './Basket.css';
 
 const Basket = () => {
@@ -8,6 +9,8 @@ const Basket = () => {
   const [error, setError] = useState(null);
   const [userId, setUserId] = useState(null);
   const [orderLoading, setOrderLoading] = useState(false);
+  const navigate = useNavigate();
+  
 
   // Fetch user data and cart items
   const fetchCart = async () => {
@@ -120,6 +123,8 @@ const Basket = () => {
           credentials: "include",
           body: JSON.stringify(orderPayload),
         });
+
+        navigate("/orders");
     
         // Handle response from backend
         if (!response.ok) {
