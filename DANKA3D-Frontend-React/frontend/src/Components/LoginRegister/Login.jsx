@@ -3,10 +3,8 @@ import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
 import "./LoginRegister.css";
 
-// Icons
 import { LuMail, LuLock, LuSquareCheck, LuSquare } from "react-icons/lu";
 
-// Environment variable for API base URL
 const API_BASE_URL = "http://localhost:5277/api";
 
 
@@ -21,7 +19,6 @@ const Login = () => {
 
   const navigate = useNavigate();
 
-  // Handle form input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -30,11 +27,10 @@ const Login = () => {
     }));
   };
 
-  // Handle login form submission
   const handleLogin = async (e) => {
     e.preventDefault();
-    setError(""); // Clear previous errors
-    setLoading(true); // Indicate loading state
+    setError("");
+    setLoading(true);
 
     if (!formData.email || !formData.password) {
       setError("Az e-mail és a jelszó kitöltése kötelező.");
@@ -46,13 +42,13 @@ const Login = () => {
       const response = await axios.post(
         `${API_BASE_URL}/User/login`,
         { email: formData.email, password: formData.password },
-        { withCredentials: true } // Include cookies in request
+        { withCredentials: true } 
       );
 
       console.log("Login successful:", response.data);
 
       if (response.data.message === "Login successful!") {
-        navigate("/"); // Redirect to homepage
+        navigate("/"); 
       } else {
         setError("Ismeretlen hiba történt a bejelentkezés során.");
       }
@@ -65,7 +61,7 @@ const Login = () => {
         setError("Hálózati hiba történt. Kérlek, próbáld újra később.");
       }
     } finally {
-      setLoading(false); // Reset loading state
+      setLoading(false);
     }
   };
 

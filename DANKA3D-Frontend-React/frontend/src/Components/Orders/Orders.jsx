@@ -9,13 +9,11 @@ const Orders = () => {
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
-  // Fetch user orders
   const fetchUserOrders = async () => {
     try {
       setLoading(true);
       setError(null);
 
-      // Get logged-in user information
       const userResponse = await fetch('http://localhost:5277/api/user/me', {
         credentials: 'include',
       });
@@ -33,7 +31,6 @@ const Orders = () => {
 
       const userId = userData.userId;
 
-      // Fetch orders for the user
       const ordersResponse = await fetch(`http://localhost:5277/api/orders/user/${userId}`, {
         method: 'GET',
         credentials: 'include',
@@ -57,7 +54,6 @@ const Orders = () => {
     fetchUserOrders();
   }, []);
 
-  // Render individual order products
   const renderOrderProducts = (products) => {
     if (!products || !products.length) {
       return <p>Nincsenek termékek.</p>;
@@ -79,7 +75,6 @@ const Orders = () => {
     ));
   };
 
-  // Render individual orders
   const renderOrders = () => {
     if (orders.length === 0) {
       return <p>Ez a felhasználó még nem rendelt semmit.</p>;

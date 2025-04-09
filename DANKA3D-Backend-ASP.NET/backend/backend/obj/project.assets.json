@@ -3723,11 +3723,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\DankaAndras14F\\AM3D\\DANKA3D-Backend-ASP.NET\\backend\\backend\\backend.csproj",
+      "projectUniqueName": "D:\\DankaAndras14F\\AM3D-1\\DANKA3D-Backend-ASP.NET\\backend\\backend\\backend.csproj",
       "projectName": "backend",
-      "projectPath": "D:\\DankaAndras14F\\AM3D\\DANKA3D-Backend-ASP.NET\\backend\\backend\\backend.csproj",
+      "projectPath": "D:\\DankaAndras14F\\AM3D-1\\DANKA3D-Backend-ASP.NET\\backend\\backend\\backend.csproj",
       "packagesPath": "C:\\Users\\danka.andras.balint\\.nuget\\packages\\",
-      "outputPath": "D:\\DankaAndras14F\\AM3D\\DANKA3D-Backend-ASP.NET\\backend\\backend\\obj\\",
+      "outputPath": "D:\\DankaAndras14F\\AM3D-1\\DANKA3D-Backend-ASP.NET\\backend\\backend\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -3760,7 +3760,8 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
       "net8.0": {
@@ -3816,7 +3817,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -65,7 +65,7 @@ VALUES
 ('Húsvéti ajtódísz (bal oldal)', 'Kiváló minőségű 3D nyomtatott ajtódísz.', 2500, 80, 'fehér', 'http://localhost:5277/images/husvetiajtodisz2.jpg'),
 ('Húsvéti kosár', 'Kiváló minőségű 3D nyomtatott kosár.', 3000, 50, 'kék', 'http://localhost:5277/images/husvetikosar.jpg'),
 ('Húsvéti nyulak', 'Kiváló minőségű 3D húsvéti nyulak.', 1500, 50, 'fehér, barna', 'http://localhost:5277/images/husvetinyulak.jpg'),
-('Húsvéti meglepetés tojás', 'Kiváló minőségű 3D nyomtatott meglepetés tojás.', 1500, 100, 'fehér', 'http://localhost:5277/images/meglapatestojas.jpg'),
+('Húsvéti meglepetés tojás', 'Kiváló minőségű 3D nyomtatott meglepetés tojás.', 1500, 100, 'fehér', 'http://localhost:5277/images/meglepetestojas.jpg'),
 ('Húsvéti kép kirakó', 'Kiváló minőségű 3D nyomtatott kép kirakó.', 2500, 80, 'fekete', 'http://localhost:5277/images/nyulaskirako.jpg'),
 ('Húsvéti nyúl dísz', 'Kiváló minőségű 3D nyomtatott dísz.', 1000, 100, 'piros', 'http://localhost:5277/images/nyuldisz.jpg'),
 ('Húsvéti tojás tartó', 'Kiváló minőségű 3D nyomtatott tojás tartó.', 800, 100, 'rózsaszín', 'http://localhost:5277/images/nyulastojas.jpg'),

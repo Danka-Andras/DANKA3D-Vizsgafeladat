@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WJLqswfCAz8=",
+  "dgSpecHash": "SXIxqvqf6gc=",
   "success": true,
-  "projectFilePath": "D:\\DankaAndras14F\\AM3D\\DANKA3D-Backend-ASP.NET\\backend\\backend\\backend.csproj",
+  "projectFilePath": "D:\\DankaAndras14F\\AM3D-1\\DANKA3D-Backend-ASP.NET\\backend\\backend\\backend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\danka.andras.balint\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\danka.andras.balint\\.nuget\\packages\\bouncycastle.cryptography\\2.5.1\\bouncycastle.cryptography.2.5.1.nupkg.sha512",

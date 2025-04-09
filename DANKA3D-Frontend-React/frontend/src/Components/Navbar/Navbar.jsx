@@ -39,7 +39,7 @@ const Navbar = ({ onSearch }) => {
 
   const handleSearchInputChange = (e) => {
     setSearchQuery(e.target.value);
-    onSearch(e.target.value); // Pass the search query to the parent component
+    onSearch(e.target.value);
   };
 
   return (

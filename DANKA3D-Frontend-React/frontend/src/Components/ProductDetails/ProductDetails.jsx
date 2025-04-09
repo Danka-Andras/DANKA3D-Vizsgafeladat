@@ -2,15 +2,16 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
 import './ProductDetails.css';
+import { useNavigate, Link } from "react-router-dom";
 
 const ProductDetails = () => {
   const { productId } = useParams();
-  const [product, setProduct] = useState(null); // Holds product details
-  const [quantity, setQuantity] = useState(1); // State for quantity
-  const [isLoading, setIsLoading] = useState(true); // Loading state
-  const [error, setError] = useState(null); // Error message state
+  const [product, setProduct] = useState(null); 
+  const [quantity, setQuantity] = useState(1); 
+  const [isLoading, setIsLoading] = useState(true); 
+  const [error, setError] = useState(null); 
+  const navigate = useNavigate();
 
-  // Fetch product details by productId
   useEffect(() => {
     const fetchProduct = async () => {
       try {
@@ -20,27 +21,25 @@ const ProductDetails = () => {
         }
 
         const data = await response.json();
-        setProduct(data); // Store product details in state
+        setProduct(data);
       } catch (err) {
         setError('Nem sikerült lekérni a termék adatait.');
       } finally {
-        setIsLoading(false); // Stop loading
+        setIsLoading(false);
       }
     };
 
     fetchProduct();
   }, [productId]);
 
-  // Handle "Add to Cart" button click
   const handleAddToCart = async () => {
-    // Először lekérjük a bejelentkezett felhasználó adatait
     const userResponse = await fetch('http://localhost:5277/api/User/me', {
       method: 'GET',
-      credentials: 'include', // Biztosítjuk, hogy a session cookie-k is küldésre kerüljenek
+      credentials: 'include',
     });
 
     if (!userResponse.ok) {
-      setError('A felhasználó nincs bejelentkezve.');
+      navigate("/login");
       return;
     }
 
@@ -52,7 +51,6 @@ const ProductDetails = () => {
       return;
     }
 
-    // Most, hogy van userId, hozzáadjuk a terméket a kosárhoz
     try {
       const response = await fetch('http://localhost:5277/api/Cart/add-item', {
         method: 'POST',
@@ -60,9 +58,9 @@ const ProductDetails = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          userId: userId, // Dinamikusan passzoljuk a userId-t
-          productId: product.id, // A kiválasztott termék ID-ja
-          quantity: quantity, // A kiválasztott mennyiség
+          userId: userId,
+          productId: product.id,
+          quantity: quantity,
         }),
       });
 
