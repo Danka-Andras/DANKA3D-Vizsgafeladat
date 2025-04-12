@@ -1,0 +1,8 @@
+.as{
+    border: 3px solid black !important;
+    padding: 20px;
+    text-align: center;
+    background-color: turquoise;
+    border-radius: 8px;
+    max-width: 1250px;
+}

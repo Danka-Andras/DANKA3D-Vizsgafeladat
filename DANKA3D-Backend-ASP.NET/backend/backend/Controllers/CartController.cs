@@ -167,8 +167,35 @@ public class CartController : ControllerBase
         }
     }
 
+    // Delete all items from the cart
+    [HttpDelete("clear-cart/{userId}")]
+    public async Task<IActionResult> ClearCart(int userId)
+    {
+        try
+        {
+            // Find the user's cart
+            var cart = await _context.Carts
+                .Include(c => c.CartItems)
+                .FirstOrDefaultAsync(c => c.UserId == userId);
 
-    // Data model for adding items to the cart
+            if (cart == null || !cart.CartItems.Any())
+            {
+                return NotFound(new { message = "The cart is already empty or does not exist." });
+            }
+
+            // Remove all items from the cart
+            _context.CartItems.RemoveRange(cart.CartItems);
+            await _context.SaveChangesAsync();
+
+            return Ok(new { message = "All items have been removed from the cart." });
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error clearing the cart: {ex.Message}");
+            return StatusCode(500, new { message = $"An error occurred while clearing the cart: {ex.Message}" });
+        }
+    }
+
     public class AddToCartRequest
     {
         public int UserId { get; set; }

@@ -56,9 +56,9 @@ const Login = () => {
       console.error("Login error:", err.response?.data || err.message);
 
       if (err.response?.status === 401) {
-        setError("Hibás e-mail vagy jelszó.");
+        alert("Hibás e-mail vagy jelszó.");
       } else {
-        setError("Hálózati hiba történt. Kérlek, próbáld újra később.");
+        alert("Hálózati hiba történt. Kérlek, próbáld újra később.");
       }
     } finally {
       setLoading(false);
@@ -113,9 +113,9 @@ const Login = () => {
 
           {error && <p style={{ color: "red", textAlign: "center" }}>{error}</p>}
 
-          <div style={{ textAlign: "center", marginTop: "15px" }}>
+          {/* <div style={{ textAlign: "center", marginTop: "15px" }}>
             <a href="/forgotpassword">Elfelejtett jelszó?</a>
-          </div>
+          </div> */}
 
           <div className="register-link">
             <p>

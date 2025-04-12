@@ -33,6 +33,22 @@
   },
   {
     "ContainingType": "CartController",
+    "Method": "ClearCart",
+    "RelativePath": "api/Cart/clear-cart/{userId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CartController",
     "Method": "RemoveCartItem",
     "RelativePath": "api/Cart/remove-item/{cartItemId}",
     "HttpMethod": "DELETE",

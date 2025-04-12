@@ -13,6 +13,13 @@
     gap: 20px;
     justify-content: center;
   }
+
+  .product-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
   .pagination-buttons {
     display: flex;
     justify-content: center;

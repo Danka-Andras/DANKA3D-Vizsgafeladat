@@ -18,7 +18,7 @@ const LoginRegister = () => {
     e.preventDefault();
 
     if (!isChecked) {
-      setError('El kell fogadnod a feltételeket és adatvédelmi szabályzatot.');
+      alert('El kell fogadnod a feltételeket és adatvédelmi szabályzatot.');
       return;
     }
 
@@ -63,8 +63,9 @@ const LoginRegister = () => {
                 {isChecked ? <LuSquareCheck size={20} /> : <LuSquare size={20} />}
             </label>
             <p>
-                Elfogadom a <strong><a href="/terms" style={{ textDecoration: 'none', color: 'inherit' }}>Feltételeket</a></strong> és az 
-                <strong><a href="/privacy" style={{ textDecoration: 'none', color: 'inherit' }}> Adatvédelmet</a></strong>.
+                {/* Elfogadom a <strong><a href="/terms" style={{ textDecoration: 'none', color: 'inherit' }}>Feltételeket</a></strong> és az 
+                <strong><a href="/privacy" style={{ textDecoration: 'none', color: 'inherit' }}> Adatvédelmet</a></strong>. */}
+                Elfogadom a feltételeket és az adatvédelmet.
             </p>
           </div>
           <button type='submit'>Regisztráció</button>
