@@ -1,0 +1,31 @@
+﻿<Window x:Class="_3DadminpanelGM.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_3DadminpanelGM"
+        mc:Ignorable="d"
+        Title="Adminpanel" Height="450" Width="800" Background="White">
+    <Grid Margin="10">
+        <DataGrid x:Name="ordersGrid" AutoGenerateColumns="False" CanUserAddRows="False"
+                  HeadersVisibility="Column" Margin="0,0,0,50">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="E-mail" Binding="{Binding Email}" Width="*" />
+                <DataGridTextColumn Header="Termék" Binding="{Binding Termek}" Width="*" />
+                <DataGridTextColumn Header="Mennyiség" Binding="{Binding Mennyiseg}" Width="80" />
+                <DataGridTextColumn Header="Ár" Binding="{Binding Ar}" Width="80" />
+                <DataGridTextColumn Header="Státusz" Binding="{Binding Statusz}" Width="100" />
+                <DataGridTemplateColumn Header="Műveletek" Width="150">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Button Content="Módosít" Margin="2" Click="ModifyOrder_Click" Background="#61dafb" />
+                                <Button Content="Törlés" Margin="2" Click="DeleteOrder_Click" Background="Tomato" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
