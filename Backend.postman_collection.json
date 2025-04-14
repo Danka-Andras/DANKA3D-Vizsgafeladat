@@ -1,0 +1,173 @@
+{
+	"info": {
+		"_postman_id": "e949ffaf-5ff9-40d5-9b25-a29c718ec867",
+		"name": "Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44060047",
+		"_collection_link": "https://lunar-shadow-2488414.postman.co/workspace/Gintli-M%C3%A1t%C3%A9's-Workspace~e2013d88-b203-48de-8062-2e331b7a35d2/collection/44060047-e949ffaf-5ff9-40d5-9b25-a29c718ec867?action=share&source=collection_link&creator=44060047"
+	},
+	"item": [
+		{
+			"name": "Order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer <token>",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"items\": [\r\n    {\r\n      \"productId\": 1,\r\n      \"quantity\": 2\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5277/api/order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5277",
+					"path": [
+						"api",
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cart",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer <token>",
+						"type": "text"
+					},
+					{
+						"key": "Cookie",
+						"value": ".AspNetCore.Session=",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5277/api/cart",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5277",
+					"path": [
+						"api",
+						"cart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AllProducts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5277/api/product?page=1&pageSize=24",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5277",
+					"path": [
+						"api",
+						"product"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "pageSize",
+							"value": "24"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"teszt@pelda.hu\",\r\n  \"password\": \"jelszo123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5277api/User/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5277api",
+					"path": [
+						"User",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alap index.html",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"teszt@pelda.hu\",\r\n  \"password\": \"jelszo123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5277/swagger/index.html",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5277",
+					"path": [
+						"swagger",
+						"index.html"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
