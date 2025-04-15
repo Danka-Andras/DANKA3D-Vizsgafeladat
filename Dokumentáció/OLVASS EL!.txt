@@ -1,3 +1,2 @@
 Sajnálatos módon későn tudtuk meg, hogy pdf formátumban kell feltölteni a dokumentációt és nem powerpointban 
-(előző technikusi vizsgánál csak az kellet), ezért a pdf documentumban 90%-ban csak be van másolva a ppt, ezért lehet 
-egy-két helyen elég csúnya. Mellékeltük a ppt-t is, ott jól látszik minden.
+(előző technikusi vizsgánál csak az kellet), ezért idő szűkében a pdf documentumban 90%-ban csak be van másolva a ppt, ezért lehet egy-két helyen elég csúnya. Mellékeltük a ppt-t is, ott jól látszik minden.
