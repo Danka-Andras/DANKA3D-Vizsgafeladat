@@ -1,0 +1,256 @@
+{
+	"info": {
+		"_postman_id": "3009e628-7d67-4376-b782-45513db407d9",
+		"name": "Danka3D",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44060047",
+		"_collection_link": "https://lunar-shadow-2488414.postman.co/workspace/Gintli-M%C3%A1t%C3%A9's-Workspace~e2013d88-b203-48de-8062-2e331b7a35d2/collection/44060047-3009e628-7d67-4376-b782-45513db407d9?action=share&source=collection_link&creator=44060047"
+	},
+	"item": [
+		{
+			"name": "Rendelés létrehozása",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userId\": 1,\r\n  \"totalPrice\": 9999,\r\n  \"status\": \"Pending\",\r\n  \"createdAt\": \"2025-04-27T11:32:55.330Z\",\r\n  \"orderProducts\": [\r\n    {\r\n      \"productId\": 2,\r\n      \"quantity\": 1,\r\n      \"price\": 4999,\r\n      \"imageUrl\": \"https://example.com/product2.jpg\"\r\n    },\r\n    {\r\n      \"productId\": 3,\r\n      \"quantity\": 1,\r\n      \"price\": 5000,\r\n      \"imageUrl\": \"https://example.com/product3.jpg\"\r\n    }\r\n  ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5277/api/Orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5277",
+					"path": [
+						"api",
+						"Orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Rendelések listázása",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5277/api/Orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5277",
+					"path": [
+						"api",
+						"Orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Kosár ürítése (user alapján)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5277/api/cart/clear-cart/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5277",
+					"path": [
+						"api",
+						"cart",
+						"clear-cart",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Kosárhoz termék hozzáadása",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userId\": 1,\r\n  \"productId\": 2,\r\n  \"quantity\": 3\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5277/api/cart",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5277",
+					"path": [
+						"api",
+						"cart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Kosár lekérése (user alapján)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5277/api/cart/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5277",
+					"path": [
+						"api",
+						"cart",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Termék törlése (id alapján)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5277/api/product/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5277",
+					"path": [
+						"api",
+						"product",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Új termék hozzáadása",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 0,\r\n  \"name\": \"3D Kulcstartó\",\r\n  \"description\": \"Egyedi 3D nyomtatott kulcstartó\",\r\n  \"price\": 2499.99,\r\n  \"color\": \"Piros\",\r\n  \"imageUrl\": \"https://example.com/images/kulcstarto.jpg\",\r\n  \"createdAt\": \"2025-04-27T11:33:50.676Z\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5277/api/Product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5277",
+					"path": [
+						"api",
+						"Product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Termékek kezelése",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5277/api/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5277",
+					"path": [
+						"api",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"proba@example.com\",\r\n  \"password\": \"TesztJelszo123!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5277/api/user/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5277",
+					"path": [
+						"api",
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
